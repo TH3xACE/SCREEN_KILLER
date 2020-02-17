@@ -56,7 +56,7 @@ do
 CRON=" "
 done
 
-var1=$(echo $(date '+%M'))
+var1=$(echo $(date '+%S'))
 var2='60'
 varr="$((var2 - var1))"
 
