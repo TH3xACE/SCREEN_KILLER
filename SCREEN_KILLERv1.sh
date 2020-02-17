@@ -36,7 +36,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Start recording commands") 
-            echo "Starting to record commands..."
+            echo "Starting to record commands...open new tabs! current tabs will not be recorded"
 	    bash "$PWD/start_recterm.sh"
             ;;
         "Stop recording commands") 
