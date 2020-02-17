@@ -57,7 +57,7 @@ Some of the functionalities
 Usage
 =============
 
-Requirement: scrot must be installed (apt-get install scrot)
+Requirement: scrot must be installed (apt-get install scrot). Remember to chmod +x all .sh for execute right.
 
  .. code-block:: console
  
