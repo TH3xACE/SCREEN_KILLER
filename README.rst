@@ -64,6 +64,10 @@ Usage
   Then choose the feature that you want to run. It is important to stop the capturing at the end of the day. 
   
  * **Don't forget to stop capturing when you are done!**
+ 
+ .. image:: ./pictures/sck.png
+ 	:width: 700px
+ 	:alt: Project
 
 =============
 Disclaimer
