@@ -63,9 +63,10 @@ Requirement: scrot must be installed (apt-get install scrot)
  
  	./screen_killer.sh 
    
-   .sudo /screen_killer.sh 
   
-  Then choose the feature that you want to run. It is important to stop the capturing at the end of the day. 
+It is recommended to run the tool as root but you can sudo ./screen_killer.sh .It should work but I have not tested all the features.
+  
+Then choose the feature that you want to run. It is important to stop the capturing at the end of the day. 
   
  * **Don't forget to stop capturing when you are done!**
  
