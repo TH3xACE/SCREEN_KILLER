@@ -1,19 +1,26 @@
 #/bin/bash
+
+
+##### (Cosmetic) Colour output
+RED="\033[01;31m"      # Issues/Errors
+GREEN="\033[01;32m"    # Success
+YELLOW="\033[01;33m"   # Warnings/Information
+BLUE="\033[01;34m"     # Heading
+BOLD="\033[01;01m"     # Highlight
+RESET="\033[00m"       # Normal
+
 chk_scrot=$(dpkg -l | grep "scrot")
 
 if [ -z "$chk_scrot" ]; then
 echo -e "You need to install scrot. apt-get install scrot"
 fi
 
+#echo -e "${YELLOW} Screen Capture Started.  ${RESET}"
+
 path1="$PWD/scr_cap.sh"
 
-
-var1=$(echo $(date '+%M'))
-var2='60'
-varr="$((var2 - var1))"
-
 echo -e "The screenshots will be saved at :" "/tmp/$(date '+%d-%b-%Y')"
-echo -e "The screen capture will start in about: " $varr "Seconds"
+#echo -e "The screen capture will start in about: " $varr "Seconds"
 
 #CRON="*/1 * * * * $path1"
 
@@ -25,7 +32,7 @@ echo -e "The screen capture will start in about: " $varr "Seconds"
 
 count=1
 # frequency in seconds
-#freq=10i
+#freq=10
 freq="$1"
 while [ $count -le 60 ]
 do	
@@ -48,3 +55,18 @@ do
     cat <(crontab -l |grep -v "${CRON}") <(echo "${CRON}") | crontab -
 CRON=" "
 done
+
+var1=$(echo $(date '+%M'))
+var2='60'
+varr="$((var2 - var1))"
+
+cc=$((varr/freq))
+while [ $cc != 0 ]
+do
+sleep $freq
+cc=$((cc-1))
+bash $PWD/scr_cap.sh 
+done
+
+
+

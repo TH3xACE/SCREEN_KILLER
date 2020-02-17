@@ -36,7 +36,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Start recording commands") 
-            echo "Starting to record commands...open new tabs! current tabs will not be recorded"
+            echo "Starting to record commands..."
 	    bash "$PWD/start_recterm.sh"
             ;;
         "Stop recording commands") 
@@ -44,14 +44,16 @@ do
 	    bash "$PWD/stop_recterm.sh"
             ;;
         "Start Screen Capture")
-	    echo "Starting screen capture..."
+	    #echo -e "${YELLOW} Starting screen capture... ${RESET}"
 	    echo -e "${RED} [+] Please enter the frequency screen capture in seconds: ${RESET}"
 	    read freq
 	    #echo $freq
-	    bash "$PWD/start_recscr.sh" $freq
+	    echo -e "${YELLOW} Starting screen capture... ${RESET}"
+	    bash "$PWD/start_recscr.sh" $freq 
+	    echo -e "${GREEN} Screen capture started... ${RESET}"
             ;;
 	"Stop Screen Capture")
-	    echo "Stopping screen capture...might take a few more screencapture before stopping!"
+	    echo -e "${YELLOW} Stopping screen capture...Please wait a few moment! ${RESET}"
 	    bash "$PWD/stop_recscr.sh"
             ;;
         "Quit")
