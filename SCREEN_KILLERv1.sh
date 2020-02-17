@@ -40,7 +40,7 @@ do
 	    bash "$PWD/start_recterm.sh"
             ;;
         "Stop recording commands") 
-            echo "Stopping the recording of commands...Leave a little time for all commands to get saved!"
+            echo "Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals"
 	    bash "$PWD/stop_recterm.sh"
             ;;
         "Start Screen Capture")
