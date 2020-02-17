@@ -2,7 +2,7 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/Sk.jpg
+.. image:: ./pictures/scrk.png
  	:width: 700px
  	:alt: Project
 
