@@ -1,3 +1,5 @@
-#recterm "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -qfa /tmp/$(date '+%d-%b-%Y')/tcommands/$(date +"%d-%b-%y_%H")_cmd.txt)
+#recterm "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -qfa /tmp/$(date '+%d-%b-%Y')/tcommands/$(date +"%d-%b-%y_%H")_tcommands.txt)
 
-test "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -f /tmp/$(date '+%d-%b-%Y')/commands/$(date +"%H-%M-%S")_tcommands.txt)
+#test "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -f /tmp/$(date '+%d-%b-%Y')/commands/$(date +"%H-%M-%S")_tcommands.txt)
+
+test "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -qfa /tmp/$(date '+%d-%b-%Y')/commands/$(date +"%H-%M-%S")_tcommands.txt)
