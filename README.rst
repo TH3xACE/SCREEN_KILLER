@@ -62,6 +62,8 @@ Requirement: scrot must be installed (apt-get install scrot)
  .. code-block:: console
  
  	./screen_killer.sh 
+   
+   .sudo /screen_killer.sh 
   
   Then choose the feature that you want to run. It is important to stop the capturing at the end of the day. 
   
