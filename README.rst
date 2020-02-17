@@ -57,6 +57,8 @@ Some of the functionalities
 Usage
 =============
 
+Requirement: scrot must be installed (apt-get install scrot)
+
  .. code-block:: console
  
  	./screen_killer.sh 
