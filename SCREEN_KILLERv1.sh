@@ -36,6 +36,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Start recording commands") 
+	    chkterm=" "
  	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
 	    if [ "$chkterm" ]; then
  	    echo -e "${RED} There is already a recording session running. ${RESET}"    
@@ -46,6 +47,7 @@ do
 	    fi
             ;;
         "Stop recording commands") 
+	    chkterm=" "
 	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
 	    if [ "$chkterm" ]; then
             echo "Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals"
@@ -56,6 +58,12 @@ do
 	    bash "
             ;;
         "Start Screen Capture")
+	    chkscr=" "
+	    chkscr=$(crontab -l | grep "scr_cap")
+	    if [ "$chkscr" ]; then
+ 	    echo -e "${RED} There is already a recording session running. ${RESET}"    
+    	    else
+ 	    :
 	    #echo -e "${YELLOW} Starting screen capture... ${RESET}"
 	    echo -e "${RED} [+] Please enter the frequency screen capture in seconds: ${RESET}"
 	    read freq
@@ -64,10 +72,18 @@ do
 	    bash "$PWD/start_recscr.sh" $freq 
 	    freq=" "
 	    echo -e "${GREEN} Screen capture started... ${RESET}"
+	    fi
             ;;
 	"Stop Screen Capture")
+	    chkscr=" "
+	    chkscr=$(crontab -l | grep "scr_cap")
+	    if [ "$chkscr" ]; then
 	    echo -e "${YELLOW} Stopping screen capture...Please wait a few moment! ${RESET}"
 	    bash "$PWD/stop_recscr.sh"
+	    else
+	    :
+	    echo -e "${RED} There is no running session to stop... ${RESET}"
+	    fi
             ;;
         "Quit")
             break
