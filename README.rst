@@ -76,11 +76,6 @@ Then choose the feature that you want to run. It is important to stop the captur
  .. image:: ./pictures/sck.png
  	:width: 700px
  	:alt: Project
-
- .. image:: ./pictures/sckv.png
- 	:width: 200px
- 	:alt: Project
-   
   
 +----------------------------------------------------------+----------------------------------------------------------+
 |* **Video 1 : Demo - Terminal Logging**	   	   |* **Video 2: Demo - Screenshot** 	  		      |
