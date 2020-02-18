@@ -12,14 +12,14 @@ RESET="\033[00m"       # Normal
 chk_scrot=$(dpkg -l | grep "scrot")
 
 if [ -z "$chk_scrot" ]; then
-echo -e "You need to install scrot. apt-get install scrot"
+echo -e "${RED}[*] You need to install scrot. apt-get install scrot ${RESET}"
 
 
 #echo -e "${YELLOW} Screen Capture Started.  ${RESET}"
 
 path1="$PWD/scr_cap.sh"
 
-echo -e "The screenshots will be saved at :" "/tmp/$(date '+%d-%b-%Y')"
+echo -e "${YELLOW}The screenshots will be saved at :" "/tmp/$(date '+%d-%b-%Y') ${RESET}"
 #echo -e "The screen capture will start in about: " $varr "Seconds"
 
 #CRON="*/1 * * * * $path1"
