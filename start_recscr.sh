@@ -60,9 +60,16 @@ varr="$((var2 - var1))"
 cc=$((varr/freq))
 while [ $cc != 0 ]
 do
-sleep $freq
+sleep $freq 2>/dev/null
+chkscr=" "
+chkscr=$(crontab -l | grep "scr_cap")
+if [ "$chkscr" ]; then
 cc=$((cc-1))
-bash $PWD/scr_cap.sh 
+bash $PWD/scr_cap.sh
+else
+:
+exit
+fi
 done &
 else
 :

@@ -44,13 +44,14 @@ do
  	    :
 	    echo -e "${GREEN}[+] Recording of commands - Started ${RESET}"
 	    bash "$PWD/start_recterm.sh"
-	    fi
+	    echo -e "${YELLOW}[*] Please open new ternimal/s for the logging.${RESET}"
+            fi
             ;;
         "Stop recording commands") 
 	    chkterm=" "
 	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
 	    if [ "$chkterm" ]; then
-            echo "${GREEN}[-] Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals ${RESET}"
+            echo -e "${YELLOW}[-] Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals. ${RESET}"
 	    bash "$PWD/stop_recterm.sh"
 	    else
  	    :

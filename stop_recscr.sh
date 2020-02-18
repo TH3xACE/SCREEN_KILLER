@@ -11,8 +11,13 @@ RESET="\033[00m"       # Normal
 CRONN=$(crontab -l | grep -v "scr_cap.sh")
 #echo "$CRONN"
 cat <(crontab -l |grep -v "${CRONN}") <(echo "${CRONN}") | crontab -
-killall sleep 
-sleep 8
+#killall sleep 2>/dev/null 
+psrec=$(ps aux | grep -w "start_recscr.sh" | grep -v "grep" | awk {'print $2'}) 2>/dev/null
+#echo "$psrec"
+if [ "$psrec" ]; then
+kill -9 "$psrec"
+fi
+killall sleep 2>/dev/null 
 rmp="/tmp/$(date '+%d-%b-%Y')/*_scncap_*.jpg"
-rm $rmp 2>/dev/null
+rm $rmp  2>/dev/null
 echo -e "${GREEN}[+] Screen Capture - Stopped ${RESET}"
