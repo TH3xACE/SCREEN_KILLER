@@ -55,7 +55,7 @@ do
 	    else
  	    :
 	    echo -e "${RED} There is no running session to stop... ${RESET}"
-	    bash "
+	    fi
             ;;
         "Start Screen Capture")
 	    chkscr=" "
