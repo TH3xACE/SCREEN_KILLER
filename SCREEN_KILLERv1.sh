@@ -39,10 +39,10 @@ do
 	    chkterm=" "
  	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
 	    if [ "$chkterm" ]; then
- 	    echo -e "${RED} There is already a recording session running. ${RESET}"    
+ 	    echo -e "${RED}[*] There is already a recording session running. ${RESET}"    
     	    else
  	    :
-	    echo -e "${GREEN}Starting to record commands... ${RESET}"
+	    echo -e "${GREEN}[+] Recording of commands - Started ${RESET}"
 	    bash "$PWD/start_recterm.sh"
 	    fi
             ;;
@@ -50,39 +50,39 @@ do
 	    chkterm=" "
 	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
 	    if [ "$chkterm" ]; then
-            echo "Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals"
+            echo "${GREEN}[-] Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals ${RESET}"
 	    bash "$PWD/stop_recterm.sh"
 	    else
  	    :
-	    echo -e "${RED} There is no running session to stop... ${RESET}"
+	    echo -e "${RED}[*] There is no running session to stop... ${RESET}"
 	    fi
             ;;
         "Start Screen Capture")
 	    chkscr=" "
 	    chkscr=$(crontab -l | grep "scr_cap")
 	    if [ "$chkscr" ]; then
- 	    echo -e "${RED} There is already a recording session running. ${RESET}"    
+ 	    echo -e "${RED}[*] There is already a recording session running. ${RESET}"    
     	    else
  	    :
 	    #echo -e "${YELLOW} Starting screen capture... ${RESET}"
 	    echo -e "${RED} [+] Please enter the frequency screen capture in seconds: ${RESET}"
 	    read freq
 	    #echo $freq
-	    echo -e "${YELLOW} Starting screen capture... ${RESET}"
+	    echo -e "${YELLOW}[-] Starting screen capture... ${RESET}"
 	    bash "$PWD/start_recscr.sh" $freq 
 	    freq=" "
-	    echo -e "${GREEN} Screen capture started... ${RESET}"
+	    echo -e "${GREEN}[+] Screen capture started... ${RESET}"
 	    fi
             ;;
 	"Stop Screen Capture")
 	    chkscr=" "
 	    chkscr=$(crontab -l | grep "scr_cap")
 	    if [ "$chkscr" ]; then
-	    echo -e "${YELLOW} Stopping screen capture...Please wait a few moment! ${RESET}"
+	    echo -e "${YELLOW}[-] Stopping screen capture...Please wait a few moment! ${RESET}"
 	    bash "$PWD/stop_recscr.sh"
 	    else
 	    :
-	    echo -e "${RED} There is no running session to stop... ${RESET}"
+	    echo -e "${RED}[*] There is no running session to stop... ${RESET}"
 	    fi
             ;;
         "Quit")
