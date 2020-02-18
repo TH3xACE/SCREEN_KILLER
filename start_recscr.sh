@@ -66,7 +66,7 @@ do
 sleep $freq
 cc=$((cc-1))
 bash $PWD/scr_cap.sh 
-done
+done &
 fi
 
 
