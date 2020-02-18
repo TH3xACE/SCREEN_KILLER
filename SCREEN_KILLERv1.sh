@@ -36,12 +36,24 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Start recording commands") 
-            echo "Starting to record commands..."
+ 	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
+	    if [ "$chkterm" ]; then
+ 	    echo -e "${RED} There is already a recording session running. ${RESET}"    
+    	    else
+ 	    :
+	    echo -e "${GREEN}Starting to record commands... ${RESET}"
 	    bash "$PWD/start_recterm.sh"
+	    fi
             ;;
         "Stop recording commands") 
+	    chkterm=$(cat $HOME/.bashrc | grep "tcommands")
+	    if [ "$chkterm" ]; then
             echo "Stopping the recording of commands...Leave a little time for all commands to get saved then close all the terminals"
 	    bash "$PWD/stop_recterm.sh"
+	    else
+ 	    :
+	    echo -e "${RED} There is no running session to stop... ${RESET}"
+	    bash "
             ;;
         "Start Screen Capture")
 	    #echo -e "${YELLOW} Starting screen capture... ${RESET}"
