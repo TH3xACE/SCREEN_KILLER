@@ -13,7 +13,7 @@ chk_scrot=$(dpkg -l | grep "scrot")
 
 if [ -z "$chk_scrot" ]; then
 echo -e "You need to install scrot. apt-get install scrot"
-fi
+
 
 #echo -e "${YELLOW} Screen Capture Started.  ${RESET}"
 
@@ -67,6 +67,6 @@ sleep $freq
 cc=$((cc-1))
 bash $PWD/scr_cap.sh 
 done
-
+fi
 
 
