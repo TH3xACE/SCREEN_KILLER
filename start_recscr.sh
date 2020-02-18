@@ -10,10 +10,8 @@ BOLD="\033[01;01m"     # Highlight
 RESET="\033[00m"       # Normal
 
 chk_scrot=$(dpkg -l | grep "scrot")
-
-if [ -z "$chk_scrot" ]; then
+if [ "$chk_scrot" ]; then
 echo -e "${RED}[*] You need to install scrot. apt-get install scrot ${RESET}"
-
 
 #echo -e "${YELLOW} Screen Capture Started.  ${RESET}"
 
