@@ -80,12 +80,12 @@ Then choose the feature that you want to run. It is important to stop the captur
 * **Video 1 : Demo - Terminal Logging**	   
 .. raw:: html						  
 						   					      
-<a href="https://youtu.be/AjCy7yep8I4"><img src="./pictures/sckv.png" width="350" height="200"></a>	
+<a href="https://youtu.be/AjCy7yep8I4"> <img src="./pictures/sckv.png" width="350" height="200"></a>	
 
-* **Video 1 : Demo - Screenshot**	   
+* **Video 2 : Demo - Screenshot**	   
 .. raw:: html						  
 						   					      
-<a href="https://youtu.be/hsyd9OUOgZo"><img src="./pictures/sckv.png" width="350" height="200"></a>	
+<a href="https://youtu.be/hsyd9OUOgZo"> <img src="./pictures/sckv.png" width="350" height="200"></a>	
 
 =============
 Disclaimer
