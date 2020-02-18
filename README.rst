@@ -41,7 +41,10 @@ Overview
 =============
 
 *SCREEN_KILLER* is a tool that can to take screenshot for a self-defined period (seconds) and also to log all terminal commands.
+
 This means that you can take track of all commands run for whatever number of terminals you have.
+
+* **Important: The tool for now is dev for only bash terminal. Will not work on ZSH,CSH...for now (if interested drop an issue).**
 
 =============
 Features
