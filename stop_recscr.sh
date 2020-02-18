@@ -15,4 +15,4 @@ killall sleep 2>/dev/null
 sleep 8
 rmp="/tmp/$(date '+%d-%b-%Y')/*_scncap_*.jpg"
 rm $rmp 2>/dev/null
-echo -e "${GREEN} Screen Capture - Stopped ${RESET}"
+echo -e "${GREEN}[+] Screen Capture - Stopped ${RESET}"
