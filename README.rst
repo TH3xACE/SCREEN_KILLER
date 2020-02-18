@@ -76,14 +76,16 @@ Then choose the feature that you want to run. It is important to stop the captur
  .. image:: ./pictures/sck.png
  	:width: 700px
  	:alt: Project
+ 
+ .. raw:: html	
   
 +----------------------------------------------------------+----------------------------------------------------------+
-|* **Video 1 : Demo - Terminal Logging**	   	           |* **Video 2: Demo - Screenshot** 	  		                |
-|.. raw:: html						                             |.. raw:: html					                               |
-|							                                      |							                                     |
-|  <a href="https://youtu.be/AjCy7yep8I4">   		        |  <a href="https://youtu.be/hsyd9OUOgZo">   	             |
+|* **Video 1 : Demo - Terminal Logging**	           |* **Video 2: Demo - Screenshot** 	                      |
+|.. raw:: html						   |.. raw:: html					      |
+|							   |							      |
+|  <a href="https://youtu.be/AjCy7yep8I4">   		   |  <a href="https://youtu.be/hsyd9OUOgZo">   	      |
 |  <img src="./pictures/sckv.jpg" width="350" height="200">|  <img src="./pictures/sckv.jpg" width="350" height="200">|
-|  </a>							                                |  </a>						                                  |
+|  </a>							   |  </a>						      |
 +----------------------------------------------------------+----------------------------------------------------------+
 
 
