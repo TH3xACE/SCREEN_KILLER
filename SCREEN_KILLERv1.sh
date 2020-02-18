@@ -50,6 +50,7 @@ do
 	    #echo $freq
 	    echo -e "${YELLOW} Starting screen capture... ${RESET}"
 	    bash "$PWD/start_recscr.sh" $freq 
+	    freq=" "
 	    echo -e "${GREEN} Screen capture started... ${RESET}"
             ;;
 	"Stop Screen Capture")
