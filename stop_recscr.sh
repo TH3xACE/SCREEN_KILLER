@@ -11,7 +11,7 @@ RESET="\033[00m"       # Normal
 CRONN=$(crontab -l | grep -v "scr_cap.sh")
 #echo "$CRONN"
 cat <(crontab -l |grep -v "${CRONN}") <(echo "${CRONN}") | crontab -
-killall sleep 2>/dev/null
+killall sleep 
 sleep 8
 rmp="/tmp/$(date '+%d-%b-%Y')/*_scncap_*.jpg"
 rm $rmp 2>/dev/null
