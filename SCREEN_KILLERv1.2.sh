@@ -2,7 +2,7 @@
 # This script was to developed to capture screenshot during pentest and OSCP 
 # Version="version 1"
 # V1: Date Created : 17/02/2020
-# Date of last modification : 17/02/2020
+# Date of last modification : 19/02/2020
 # @TH3_ACE - BLAIS David
 
 ##### (Cosmetic) Colour output
