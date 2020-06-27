@@ -25,6 +25,8 @@ INTRO
 
 This script was to developed to capture screenshot during pentest engagment and OSCP.
 
+IMPORTANT: The screenshot feature is no longer allowed for exam but the terminal logging is allowed for exam.
+
 If you like the tool and for my personal motivation so as to develop other tools please a +1 star * 
 
 The tool can be used by pentesters, CTF players, students and trolls :).
